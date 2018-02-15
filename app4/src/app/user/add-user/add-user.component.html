@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Add User</h1>
+    <form  #expenseForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="user.name" name="formName">
+      </div>
+      <button class="btn btn-success" (click)="submit()">Submit</button>
+    </form>
+    {{message}}
+</div>
