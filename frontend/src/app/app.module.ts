@@ -19,7 +19,6 @@ import { ImageUploaderComponent } from './image-uploader/image-uploader.componen
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { ListExpenseComponent } from './expense/list-expense/list-expense.component';
 import { AddExpenseComponent } from './expense/add-expense/add-expense.component';
-import { ListUserComponent } from './user/list-user/list-user.component';
 import { AddUserComponent } from './user/add-user/add-user.component';
 
 @NgModule({
@@ -29,7 +28,6 @@ import { AddUserComponent } from './user/add-user/add-user.component';
     ImageViewerComponent,
     ListExpenseComponent,
     AddExpenseComponent,
-    ListUserComponent,
     AddUserComponent
   ],
   imports: [
