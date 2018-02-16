@@ -50,18 +50,4 @@ module.exports =  {
 		    });
 		},
 
-		/*getAll : (req, res, next) => {
-		  model.find().populate('user').lean().exec( (err, expenses) => {
-		    if (err) return next(err);
-
-		    fs.writeFile('./export.json', JSON.stringify(expenses), (err) => {
-				    if (!err) {
-				        console.log('done');
-				        res.sendFile(path.resolve('./export.json'));
-				    }
-				});
-
-		    
-		  });
-		},*/
 };

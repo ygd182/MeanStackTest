@@ -20,4 +20,12 @@ var expenseSchema = new Schema({
 	user: {type: Schema.Types.ObjectId, ref: 'User'}
 }, { versionKey: false });
 
+expenseSchema.statics.findByIdOrCreate = function findByIdOrCreate(expense, callback) {
+    const self = this
+    self.findById(expense._id, (err, result) => {
+        return result ? callback(err, result) : self.create(expense, (err, result) => { return callback(err, result) })
+    })
+}
+
+
 module.exports = mongoose.model('Expense', expenseSchema);
