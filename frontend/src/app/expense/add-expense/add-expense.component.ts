@@ -4,6 +4,8 @@ import { UserService } from './../../user/user.service';
 import { Expense } from './../../models/expense';
 import { User } from './../../models/user';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-add-expense',
@@ -17,7 +19,8 @@ export class AddExpenseComponent implements OnInit {
   public userArray: any[];
 
   constructor(private expenseService: ExpenseService,
-              private userService: UserService) { 
+              private userService: UserService,
+              private router: Router) { 
   	
   	this.message = '';
     this.expense = new Expense('', 0 , '', new User(''));
@@ -36,6 +39,7 @@ export class AddExpenseComponent implements OnInit {
   	this.expenseService.saveExpense(this.expense).subscribe( data => {
   		console.log(data);
   		this.message = 'submitted: '+ data._id;
+      setTimeout( () => this.router.navigateByUrl('/list-expense'), 1000 );
   	});
   }
 
