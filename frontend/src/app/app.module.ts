@@ -14,6 +14,7 @@ import { AppRouter } from './app.router';
 
 
 import { ExpenseService } from './expense/expense.service';
+import { ManageDataService } from './manage-data/manage-data.service';
 import { UserService } from './user/user.service';
 import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
@@ -21,6 +22,7 @@ import { ListExpenseComponent } from './expense/list-expense/list-expense.compon
 import { AddExpenseComponent } from './expense/add-expense/add-expense.component';
 import { AddUserComponent } from './user/add-user/add-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ManageDataComponent } from './manage-data/manage-data.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ListExpenseComponent,
     AddExpenseComponent,
     AddUserComponent,
-    NavbarComponent
+    NavbarComponent,
+    ManageDataComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   providers: [
     ExpenseService,
-    UserService
+    UserService,
+    ManageDataService
   ],
   bootstrap: [AppComponent]
 })
