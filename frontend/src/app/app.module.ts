@@ -20,6 +20,7 @@ import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { ListExpenseComponent } from './expense/list-expense/list-expense.component';
 import { AddExpenseComponent } from './expense/add-expense/add-expense.component';
 import { AddUserComponent } from './user/add-user/add-user.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AddUserComponent } from './user/add-user/add-user.component';
     ImageViewerComponent,
     ListExpenseComponent,
     AddExpenseComponent,
-    AddUserComponent
+    AddUserComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
